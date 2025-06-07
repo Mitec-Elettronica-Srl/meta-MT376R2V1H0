@@ -1,6 +1,5 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI += "file://linux_6.6.patch" 
 SRC_URI += "file://defconfig"
 
 # use the "defconfig" file
