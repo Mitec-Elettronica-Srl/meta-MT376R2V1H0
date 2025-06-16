@@ -5,6 +5,10 @@ SRC_URI += "file://defconfig"
 # use the "defconfig" file
 KBUILD_DEFCONFIG:imx8mm-var-dart = ""
 
+LINUX_VERSION = "6.6.53"
+
+LINUX_VERSION_EXTENSION = "-MT376R2V1H0"
+
 KERNEL_SRC = "git://github.com/Mitec-Elettronica-Srl/linux-imx.git;protocol=https"
 SRCBRANCH:imx8mm-var-dart = "scarthgap"
 SRCREV:imx8mm-var-dart = "dac18e7d347be986d8a3e7df6b18d3df4399dec3"
