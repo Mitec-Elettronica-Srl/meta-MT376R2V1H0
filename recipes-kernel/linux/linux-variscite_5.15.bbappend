@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-LINUX_VERSION_EXTENSION = "-MT376R2V1H0"
+LINUX_VERSION_EXTENSION = "-mt376r2v1h0"
 
 KERNEL_SRC = "git://github.com/Mitec-Elettronica-Srl/linux-imx.git;protocol=https"
 SRCBRANCH:imx8mm-var-dart = "old"
