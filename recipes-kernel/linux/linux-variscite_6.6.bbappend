@@ -11,4 +11,4 @@ LINUX_VERSION_EXTENSION = "-mt376r2v1h0"
 
 KERNEL_SRC = "git://github.com/Mitec-Elettronica-Srl/linux-imx.git;protocol=https"
 SRCBRANCH:imx8mm-var-dart = "scarthgap"
-SRCREV:imx8mm-var-dart = "5d19f825ab867bee6853a3287d8da76b96bd4c21"
+SRCREV:imx8mm-var-dart = "f523faedc328dc19bd4435bf7df75cb07c3676ff"
