@@ -1,6 +1,6 @@
 SUMMARY = "USB power service"
 DESCRIPTION = "Manage USB power on the mt376r2v1h0"
-LICENSE = "GPLv2"
+LICENSE = "CLOSED"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 

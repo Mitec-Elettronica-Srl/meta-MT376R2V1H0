@@ -1,6 +1,6 @@
 SUMMARY = "Touchscreen configuration"
 DESCRIPTION = "The touchscreen on the mt376r2v1h0"
-LICENSE = "GPLv2"
+LICENSE = "CLOSED"
 
 SRC_URI += " \
     file://touch.rules \
