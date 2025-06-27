@@ -7,6 +7,7 @@ SRC_URI += " \
     file://galcore.rules \
 "
 
+PROVIDES = "mt376r2v1h0-touchscreen"
 DEPENDS += " udev"
 RDEPENDS:${PN}:append = " base-files"
 

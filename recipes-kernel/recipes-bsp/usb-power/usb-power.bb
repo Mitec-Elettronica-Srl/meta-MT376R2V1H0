@@ -9,6 +9,7 @@ SRC_URI += " \
     file://power-usb2.service \
 "
 
+PROVIDES = "mt376r2v1h0-usbpower"
 DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES','systemd',' systemd',' update-rc.d-native',d)}"
 
 RDEPENDS:${PN} = "\
