@@ -13,9 +13,11 @@ RDEPENDS:${PN}:append = " base-files"
 
 #S = "${WORKDIR}"
 
+FILES:${PN} += " ${libdir}/udev/rules.d/90-touch.rules ${libdir}/udev/rules.d/90-galcore.rules"
+
 do_install:append () {
-    install -m 0755 ${WORKDIR}/touch.rules ${D}/usr/lib/udev/rules.d/90-touch.rules
-    install -m 0755 ${WORKDIR}/galcore.rules ${D}/usr/lib/udev/rules.d/90-galcore.rules
+    install -m 0755 ${WORKDIR}/touch.rules ${libdir}/udev/rules.d/90-touch.rules
+    install -m 0755 ${WORKDIR}/galcore.rules ${libdir}/udev/rules.d/90-galcore.rules
 }
 
 COMPATIBLE_MACHINE = "(imx6ul-var-dart|imx7-var-som|imx8mm-var-dart|imx8mn-var-som|imx8mq-var-dart|imx8qm-var-som|imx8qxp-var-som|imx8qxpb0-var-som|imx8mp-var-dart)"

@@ -17,6 +17,8 @@ RDEPENDS:${PN} = "\
     var-gpio-utils \
 "
 
+FILES:${PN} += " ${D}${systemd_unitdir}/system/power-usb1.service ${D}${systemd_unitdir}/system/power-usb2.service"
+
 do_install:append () {
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/power-usb1.service ${D}${systemd_unitdir}/system
