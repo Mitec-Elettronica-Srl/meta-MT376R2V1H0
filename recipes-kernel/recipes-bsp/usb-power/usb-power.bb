@@ -1,3 +1,7 @@
+SUMMARY = "USB power service"
+DESCRIPTION = "Manage USB power on the mt376r2v1h0"
+LICENSE = "GPLv2"
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI += " \
@@ -23,3 +27,5 @@ do_install:append () {
         #update-rc.d -r ${D} bluealsa defaults
     fi
 }
+
+COMPATIBLE_MACHINE = "(imx6ul-var-dart|imx7-var-som|imx8mm-var-dart|imx8mn-var-som|imx8mq-var-dart|imx8qm-var-som|imx8qxp-var-som|imx8qxpb0-var-som|imx8mp-var-dart)"
