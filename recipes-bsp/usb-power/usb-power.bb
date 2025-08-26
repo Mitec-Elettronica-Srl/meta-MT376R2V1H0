@@ -21,6 +21,8 @@ RDEPENDS:${PN} = "\
 FILES:${PN} += " \
     ${systemd_unitdir}/system/power-usb1.service \
     ${systemd_unitdir}/system/power-usb2.service \
+    ${sysconfdir}/systemd/system/multi-user.target.wants/power-usb1.service \
+    ${sysconfdir}/systemd/system/multi-user.target.wants/power-usb2.service \
 "
 
 do_install:append () {
@@ -28,6 +30,7 @@ do_install:append () {
     install -m 0644 ${WORKDIR}/power-usb1.service ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/power-usb2.service ${D}/${systemd_unitdir}/system
 
+    install -d ${D}/${sysconfdir}/systemd/system/multi-user.target.wants
     ln -sf ${systemd_unitdir}/system/power-usb1.service \
         ${D}/${sysconfdir}/systemd/system/multi-user.target.wants/power-usb1.service
     ln -sf ${systemd_unitdir}/system/power-usb2.service \
