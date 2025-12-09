@@ -53,4 +53,18 @@ do_configure:prepend() {
     
     # Available in ARMv8.7 and later.
     kernel_defconf_variable CONFIG_ARM64_EPAN y
+
+    # Enable selinux by default
+    kernel_defconf_variable CONFIG_AUDIT y 
+    kernel_defconf_variable CONFIG_SECURITY y
+    kernel_defconf_variable CONFIG_SECURITY_NETWORK y 
+    kernel_defconf_variable CONFIG_SECURITY_SELINUX y 
+    kernel_defconf_variable CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE 1
+    kernel_defconf_variable CONFIG_LSM "landlock,lockdown,yama,integrity,selinux,bpf"
+
+    # Enable rfkill
+    kernel_defconf_variable CONFIG_RFKILL m
+    kernel_defconf_variable CONFIG_RFKILL_GPIO m
+    kernel_defconf_variable CONFIG_RFKILL_INPUT y
+    kernel_defconf_variable CONFIG_RFKILL_LEDS y
 }
