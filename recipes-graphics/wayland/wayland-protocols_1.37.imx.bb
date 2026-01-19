@@ -24,8 +24,11 @@ inherit meson pkgconfig
 
 EXTRA_OEMESON += "-Dtests=false"
 
-PACKAGES = "${PN}"
-FILES:${PN} += "${datadir}/pkgconfig/wayland-protocols.pc"
+#PACKAGES = "${PN}"
+#FILES:${PN} += "${datadir}/pkgconfig/wayland-protocols.pc"
+
+PACKAGES =+ "${PN}-dev"
+FILES:${PN}-dev += "${datadir}/pkgconfig/wayland-protocols.pc ${includedir}/* ${libdir}/pkgconfig/*.pc"
 
 BBCLASSEXTEND = "native nativesdk"
 
